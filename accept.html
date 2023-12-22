@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agreement Form</title>
+  <style>
+    /* Add some basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Agreement Form</h2>
+  <!-- Agreement checkbox -->
+  <label>
+    <input type="checkbox" id="acceptAgreement" onchange="enableNextButton()">
+    I accept the agreement
+  </label>
+  <br>
+   <label>
+    <input type="checkbox" id="acceptAgreement" onchange="enableNextButton()">
+    I do not the agreement
+  </label>
+<br>
+<br>
+  <!-- Next button initially disabled -->
+   <button >Back</button>
+  <button id="nextButton" disabled onclick="nextButtonClick()">Next</button>
+   <button >cancel</button>
+  <script>
+    function enableNextButton() {
+      var agreementCheckbox = document.getElementById('acceptAgreement');
+      var nextButton = document.getElementById('nextButton');
+      nextButton.disabled = !agreementCheckbox.checked;
+    }
+    function nextButtonClick() {
+      alert('Next button clicked!');
+    }
+  </script>
+
+</body>
+</html>
